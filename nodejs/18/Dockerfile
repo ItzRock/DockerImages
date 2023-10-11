@@ -5,7 +5,6 @@ LABEL       org.opencontainers.image.source="https://github.com/ItzRock/DockerIm
 LABEL       org.opencontainers.image.licenses="MIT"
 
 ENV NODE_VERSION=16.13.0
-RUN apt install -y curl
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ENV NVM_DIR=/root/.nvm
 RUN . "$NVM_DIR/nvm.sh" && nvm install ${NODE_VERSION}
