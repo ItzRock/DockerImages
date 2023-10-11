@@ -11,7 +11,7 @@ RUN         apt-get update \
             && rm -rf /var/lib/apt/lists/* \
             && useradd -m -d /home/container container \
             && locale-gen en_US.UTF-8
-
+RUN ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
 ENV         LC_ALL=en_US.UTF-8
 ENV         LANG=en_US.UTF-8
 ENV         LANGUAGE=en_US.UTF-8
