@@ -1,4 +1,4 @@
-FROM        node:18.18.0
+FROM        node:18-bullseye
 
 LABEL       author="Anthony" maintainer="anthonystainton+contact@gmail.com"
 LABEL       org.opencontainers.image.source="https://github.com/ItzRock/DockerImages/"
