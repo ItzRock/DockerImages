@@ -10,7 +10,7 @@ RUN         apt-get update \
             && apt-get clean \
             && rm -rf /var/lib/apt/lists/* \
             && useradd -m -d /home/container container \
-            && locale-gen en_US.UTF-8
+            && locale-gen en_US.UTF-8 \ 
             && apk add --no-cache musl-dev
 
 ENV         LC_ALL=en_US.UTF-8
