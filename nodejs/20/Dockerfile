@@ -4,7 +4,9 @@ LABEL       author="Anthony" maintainer="anthonystainton+contact@gmail.com"
 LABEL       org.opencontainers.image.source="https://github.com/tzRock/DockerImages"
 LABEL       org.opencontainers.image.licenses="MIT"
 
-RUN         apt-get update \
+RUN         add-apt-repository multiverse \
+            && dpkg --add-architecture i386 \
+            && apt-get update \
             && apt-get -y install --no-install-recommends curl ffmpeg iproute2 git sqlite3 python3 tzdata ca-certificates dnsutils build-essential steamcmd locales \
             && npm -g install npm@latest \
             && apt-get clean \
